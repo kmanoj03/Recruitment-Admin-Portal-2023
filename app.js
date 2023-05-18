@@ -6,8 +6,10 @@ const app = express();
 app.use('/',express.static(path.join(__dirname, 'static')));
 app.use(bodyparser.json());
 
+const adminRoute = require('./routes/adminLogin.js')
 const uploadRoute = require('./routes/questionUpload.js') 
 
+app.use('/admin', adminRoute)
 app.use('/upload', uploadRoute)
 
 app.use((err, req, res, next) => {
