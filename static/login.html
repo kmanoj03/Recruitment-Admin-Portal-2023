@@ -35,9 +35,11 @@
 					})
 				}).then((res) => res.json())
 
+                console.log(result)
 				if (result.status === 'ok') {
 					console.log('Got the token: ', result.data)
 					alert('Success')
+                    window.location = "./upload.html"
 				} else {
 					alert(result.error)
 				}
