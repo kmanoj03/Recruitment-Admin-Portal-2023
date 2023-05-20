@@ -11,6 +11,7 @@ async function retrieveData(req, res){
       var OptionC = req.body[i].OptionC;
       var OptionD = req.body[i].OptionD;
       var Answer = req.body[i].Answer;
+      var DiffLevel = req.body[i].DiffLevel;
   
       // console.log(sNo, question, optA, optB, optC, optD, ans);
       try{
@@ -21,7 +22,8 @@ async function retrieveData(req, res){
           OptionB,
           OptionC,
           OptionD,
-          Answer
+          Answer,
+          DiffLevel
         })
     
         console.log("Question Added: ");

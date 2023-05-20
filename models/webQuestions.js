@@ -21,6 +21,9 @@ var webQSchema = new mongoose.Schema({
     },
     Answer:{
         type:String
+    },
+    DiffLevel:{
+        type:Number
     }
 })
 
